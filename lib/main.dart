@@ -15,8 +15,7 @@ class Home extends StatefulWidget {
 }
 
 class _HomeState extends State<Home> {
-  List _toDoList = ["igorgag","minha pika", "cuckold"];
-
+  List _toDoList = ["igorgag", "minha pika", "cuckold"];
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,31 +32,30 @@ class _HomeState extends State<Home> {
               children: <Widget>[
                 Expanded(
                   child: TextField(
-                  decoration: InputDecoration(
-                    labelText: "nova tarefa",
-                    labelStyle: TextStyle(color: Colors.blueAccent),
+                    decoration: InputDecoration(
+                      labelText: "nova tarefa",
+                      labelStyle: TextStyle(color: Colors.blueAccent),
+                    ),
                   ),
-                ),
                 ),
                 RaisedButton(
                   color: Colors.blueAccent,
                   child: Text("ADD"),
                   textColor: Colors.white,
-                  onPressed: (){},
+                  onPressed: () {},
                 )
               ],
             ),
           ),
           Expanded(
             child: ListView.builder(
-              padding: EdgeInsets.only(top: 10.0),
-              itemCount: _toDoList.length,
-              itemBuilder: (context, index){
-                return ListTile(
-                  title: Text(_toDoList[index]),
-                );
-              }
-              ),
+                padding: EdgeInsets.only(top: 10.0),
+                itemCount: _toDoList.length,
+                itemBuilder: (context, index) {
+                  return ListTile(
+                    title: Text(_toDoList[index]),
+                  );
+                }),
           )
         ],
       ),
